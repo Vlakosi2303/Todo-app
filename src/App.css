@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Занимает всю высоту экрана */
+  padding: 20px; /* Фиксированные отступы */;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-container input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.input-container button {
+  padding: 14px 25px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.input-container button:hover {
+  background-color: #2980b9;
+}
+
+.task-list {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.task-item {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+}
+
+.task-item.completed {
+  background-color: #f9f9f9;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #95a5a6;
+}
+
+.view-mode, .edit-mode {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 18px;
+}
+
+.task-meta {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  color: #7f8c8d;
+  transition: color 0.3s;
+}
+
+.task-actions button:hover {
+  color: #e74c3c;
+}
+
+.edit-mode input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.edit-mode button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.edit-mode button:first-of-type {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.edit-mode button:last-of-type {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.stats {
+  text-align: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #34495e;
+}
